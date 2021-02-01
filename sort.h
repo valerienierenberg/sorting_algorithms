@@ -35,4 +35,7 @@ void print_list(const listint_t *list);
 int partition(int *arr, size_t low, size_t pivot, size_t size);
 void sort(int *array, size_t start, size_t end, size_t size);
 
+
+void merge(int *a, int n, int m);
+
 #endif
