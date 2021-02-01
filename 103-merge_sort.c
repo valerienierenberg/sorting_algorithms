@@ -9,7 +9,6 @@
 * Return: void
 */
 
-
 void merge(int *a, int n, int m)
 {
 	int i, j, k;
