@@ -21,10 +21,14 @@ void bitonic_sort(int *array, size_t size)
 	while (k > 0)
 	{
 		for (i = 0; i + k < k; i++)
+		{
 			if (array[i] > array[i + k])
+			{
 				temp = array[i];
 				array[i] = array[i + k];
 				array[i + k] = temp;
+			}
+		}
 		k = k / 2;
 	}
 
