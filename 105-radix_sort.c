@@ -16,8 +16,7 @@ static void swap(unsigned int *a, unsigned int *b)
 }
 
 /**
-* rad_sort_u - sorts an array of integers in ascending order
-*               using the radix sort algorithm
+* rad_sort_u - sorts unsigned ints
 * @from: array to sort from
 * @to: array to sort to
 * @bit: size of arrays
@@ -55,6 +54,7 @@ static void rad_sort_u(unsigned int *from, unsigned int *to, unsigned int bit)
 /**
 * radix_sort - sorts an array of integers in ascending order
 *               using the radix sort algorithm
+*           - sort signed ints: flip highest bit, sort as unsigned, flip back
 * @array: array to be sorted
 * @size: size of array
 *
