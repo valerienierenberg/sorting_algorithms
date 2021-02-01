@@ -35,4 +35,10 @@ void print_list(const listint_t *list);
 int partition(int *arr, size_t low, size_t pivot, size_t size);
 void sort(int *array, size_t start, size_t end, size_t size);
 
+
+static void swap(unsigned int *a, unsigned int *b);
+static void rad_sort_u(unsigned int *from, unsigned int *to, unsigned int bit);
+listint_t *split(listint_t *head);
+listint_t *cocktailsort(listint_t *first, listint_t *second);
+
 #endif
