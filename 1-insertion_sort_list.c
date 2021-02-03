@@ -15,15 +15,18 @@ void insertion_sort_list(listint_t **list)
 	if (list == NULL || *list == NULL)
 		return;
 
-	current = (*list)->next;
+	current = (*list)->next; /* set 'current' to posit. of 2nd node of list */
 
 	for (; current != NULL; current = current->next)
-	{
+	{ /* ^ while current exists, traverse through current */
 		while (current->prev != NULL && current->n < current->prev->n)
-		{
+		{ /*
+			* ^ as long as you are not already at the head of the list...
+			* AND the value at your position is greater than the previous value
+			*/
 			current->prev->next = current->next;
 
-			if (current->next != NULL)
+			if (current->next != NULL) /* making sure we're not at the tail */
 				current->next->prev = current->prev;
 
 			current->next = current->prev;
