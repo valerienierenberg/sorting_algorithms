@@ -21,11 +21,14 @@ void selection_sort(int *array, size_t size)
 	{
 		min = i;
 		for (j = i + 1; j < size; j++)
+		/* first time through, for loop finds minimum value in entire array */
+		/* next time thru, we only need to search for min in array[1...end] */
+		/* ...and so on */
 		{
 			if (array[j] < array[min])
-				min = j;
+				min = j; /* after this for loop, min = min value of array */
 		}
-		if (i != min)
+		if (i != min) /* if min isn't first posit of array, swap til it is */
 		{
 			temp = array[i];
 			array[i] = array[min];
