@@ -45,6 +45,7 @@ int partition(int *arr, size_t low, size_t pivot, size_t size)
 				temp = arr[low];
 				arr[low] = arr[i];
 				arr[i] = temp;
+				print_array(arr, size);
 			}
 			low++;
 		}
