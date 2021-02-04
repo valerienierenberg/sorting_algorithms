@@ -48,9 +48,9 @@ void merge_sort(int *array, size_t size)
 	merge_sort(array + m, (int)size - m);
 	printf("Merging...\n");
 	printf("[left]: ");
-	print_array(array, size);
+	printf("%d\n", array[m]);
 	printf("[right]: ");
-	print_array(array, size);
+	printf("%d\n", array[m]);
 	merge(array, (int)size, m);
 	printf("[Done]: ");
 	print_array(array, size);
